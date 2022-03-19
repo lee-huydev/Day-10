@@ -45,6 +45,7 @@ let change = (key, value) => {
       if (keyObj == 'bar') {
          for (let i in obj[keyObj]) {
             if (
+               !Array.isArray(obj[keyObj][i]) &&
                typeof obj[keyObj][i] != 'string' &&
                typeof obj[keyObj][i] != 'number' &&
                obj[keyObj][i] != null
